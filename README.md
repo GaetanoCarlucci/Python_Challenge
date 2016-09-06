@@ -9,5 +9,5 @@ Each file name corresponds to the number of the riddle.
 
 To run the solution for `riddle 1` type in command line:
 ```sh
-python 1.py
+$python 1.py
 ```
