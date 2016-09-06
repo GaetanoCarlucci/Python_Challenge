@@ -1,13 +1,11 @@
 import re
 import urllib
 
-i = 0
 nothing = "12345"
-content = ""
 while True:
-   r = urllib.urlopen("http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=" + nothing).read()
-   print r
+   page = urllib.urlopen("http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=" + nothing).read()
+   print page
    try:
-      nothing = re.search(r"(\d+)", r).group()
+      nothing = re.search(r"(\d+)", page).group()
    except:
       break
