@@ -7,7 +7,7 @@ Here I provide my solutions.
 
 Each file name corresponds to the number of the riddle.
 
-For exampke to run the solution for riddle n 1 type in command line:
+To run the solution for `riddle 1` type in command line:
 ```sh
 python 1.py
 ```
