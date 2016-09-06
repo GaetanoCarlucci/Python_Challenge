@@ -1,41 +1,29 @@
-import os
 import urllib
 import zipfile
 import re
 
 ##########################################################################
-### These operations are required to download and extract the zip file  ###
+###   These operations are required to download and open the zip file  ###
 ##########################################################################
-dir_riddle_6 = '6'
-if not os.path.exists(dir_riddle_6):
-  os.makedirs(dir_riddle_6)
-os.chdir(dir_riddle_6)
-
 file_zip = '6.zip'
-if not os.path.exists(file_zip):
-  urllib.urlretrieve('http://www.pythonchallenge.com/pc/def/channel.zip', file_zip)
-
+urllib.urlretrieve('http://www.pythonchallenge.com/pc/def/channel.zip', file_zip)
 zip_ref = zipfile.ZipFile(file_zip, 'r')
-zip_ref.extractall('.')
-zip_ref.close()
 
 #########################################################################
 ###                  Here it starts the riddle                        ###
 #########################################################################
-
-readme = "readme.txt"
-f = open(readme, 'r')
+fname = "readme.txt"
 
 comments = []
 while True:
-  content = f.read()
+  content = zip_ref.read(fname)
   print content
   try:
     nothing = re.search(r"(\d{2,})", content).group()
+    fname = "%s.txt" % nothing
   except:
     break
-  f = open("%s.txt" % nothing, 'r')
-  comments.append(zip_ref.getinfo("%s.txt" % nothing).comment)
+  comments.append(zip_ref.getinfo(fname).comment)
 
 print ''.join(comments)
 
