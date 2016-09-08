@@ -24,5 +24,3 @@ print output1
 #Prints all the corresponding ascii of string extracted from the image
 output2 = re.search(r'\[(.*?)\]', output1).group(1)
 print "\nThe url is " + ''.join([chr(int(i)) for i in output2.split(',')]) + ".html"
-
-
