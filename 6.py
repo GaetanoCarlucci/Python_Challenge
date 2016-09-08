@@ -40,4 +40,4 @@ for line in comments:
       if p not in link:
          link = link + p
 
-print "The link is: " + link.lower() +".html\n"
+print "The url is: " + link.lower() +".html\n"

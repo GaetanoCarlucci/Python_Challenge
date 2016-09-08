@@ -10,4 +10,4 @@ print message.translate(trantab)
 
 link = "map"
 
-print "\nThe link is: " + link.translate(trantab) + ".html"
+print "\nThe url is: " + link.translate(trantab) + ".html"
