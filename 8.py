@@ -15,4 +15,3 @@ User_Name = decode(page[0])
 print "User Name is: " + User_Name
 Password = decode(page[1])
 print "Password is: " + Password
-
