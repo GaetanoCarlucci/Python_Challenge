@@ -60,4 +60,4 @@ for h in range(width):
 
 new_image.show()
 
-print "The url is cat.html"
+print "The url is cat.html, the next level is uzi.html"
